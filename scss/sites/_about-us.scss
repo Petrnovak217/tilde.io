@@ -1,0 +1,276 @@
+#about-us{
+    
+    .navigatio-main-content{
+        @include navigation-main-content;
+    }
+
+    
+    .border{
+        @include border-main(-6px);
+    }
+   
+    .meet-the-team{
+        @include section-headings;
+
+        .team-avatar{
+            max-width: em(160px);
+            height: 100%;  
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .founders{
+            .person{
+                text-align: left;
+                padding: em(60px) em(80px);
+                border-bottom: em(1px) solid #cccccc;
+                min-height: em(450px);
+                width: 100%;
+
+                &-mini-picture{
+                    display: none
+                }
+            }
+            
+            .social-icons{
+                @include social-links;
+                margin-bottom: em(20px);
+            }
+            
+
+            #yehuda-katz{
+                background: transparent url('/images/about-us/yehuda-cb1173c9.jpg') bottom  right no-repeat;
+                padding-right: em(380px);
+
+                .text{
+                    padding-top: em(50px);
+
+                    h3{  
+                        font-size: em(32px);
+                        font-weight: 780;
+                    }
+
+                    p{
+                        font-size: em(17.2px);
+                        color: $text-color;
+                        margin: em(10px) 0;
+                        line-height: em(22.4px);
+                        font-weight: 100;
+
+                        .link-text{
+                            color: rgba(32, 94, 136, 0.822);
+                            text-decoration: none;
+                        }
+                    }
+                }  
+            }
+
+            #leah-silber {
+                background: transparent url('/images/about-us/leah-c978918a.jpg') bottom left no-repeat;
+                padding-left: em(380px);
+                margin-bottom: em(50px);
+
+                .text{
+                    padding-top: em(50px);
+
+                    h3{  
+                        font-size: em(32px);
+                        font-weight: 780;
+                    }
+
+                    p{
+                        font-size: em(17.4px);
+                        color: $text-color;
+                        margin: em(10px) 0;
+                        line-height: em(22.4px);
+                        font-weight: 100;
+
+                        .link-text{
+                            color: rgba(32, 94, 136, 0.822);
+                            text-decoration: none;
+                        }
+                    }
+                }  
+            }
+        }
+
+
+        .team{
+
+            margin-bottom: em(70px);
+
+            ul{
+                li{
+                    display: inline-block;
+                    min-width:23%;
+                    padding: 0 em(30px);
+                    margin-bottom: em(55px);
+                    vertical-align: top;
+                }
+                
+            }
+
+            h3{
+                font-weight: 900;
+                padding: em(15px) 0 em(5px) ;
+                margin: 0 -20px;
+            }
+
+            p{
+                font-size: em(19px);
+                padding-bottom:em(15px) ;
+            }
+
+            .social-icons{
+                @include social-links(16px,3px);
+            }
+
+            .babies-at-work{
+                background-color: #edf3f3;
+                padding: 0 em(45px) em(50px) ;
+
+                li{
+                    padding: 0 em(5px);
+                    margin-bottom: em(20px);
+                }
+
+                &-title{
+                    font-size: em(32px);               
+                    padding: em(50px,32px) 0;
+                    font-weight: 900;
+                }
+
+                p{
+                    line-height: em(24px);
+                    font-size: em(22px);
+                    color: $text-color;
+                }
+
+                .call-to-action{
+                    display: inline-block;
+                    background-color: $main-color;
+                    font-size: em(18.5px);
+                    padding: em(10px) em(29px);
+                    text-decoration: none;
+                    color: #fff;
+                    transition: all 0.5s;
+
+                    &:hover{
+                        background-color: black;
+                    }
+                }
+            }
+        }
+
+        .alumni{
+            padding-bottom: em(60px);
+            &-title{
+                font-size: em(18px);
+                color:$text-color ;
+            }
+            
+            ul{
+                width: 80%;
+                margin: em(20px) auto 0 ;
+                text-align: center;
+                li{
+                    display: inline-block;
+                    padding: em(7px) 0;
+
+                    &::after{
+                        content: '/';
+                        padding: 0 em(5px);
+                    }
+
+                    &:nth-last-child(1){
+                        &::after{
+                            content: '';
+                        }
+                    }
+
+                    a{
+                        font-size: em(14.5px);
+                        text-decoration: none;
+                        color: black;
+                        text-transform: uppercase;
+                        font-weight: 800;
+
+                        &:hover{
+                            border-bottom: em(1px) solid $main-color;
+                        }
+
+                    }
+                }
+            }      
+        }
+    }
+
+    .open-source{
+        padding: em(50px);
+        &-title{
+
+            padding: em(18px,50px) 0  em(10px,50px) 0;
+            font-size: em(40px);
+            font-weight: 900;
+        }
+    
+            &-text{
+            font-size: em(22px);
+            padding: 0 em(40px);
+            color: $text-color;
+            margin-bottom: em(55px,24px);
+            }
+    
+        
+            @include section-headings;
+            
+                
+            .projects{
+                text-align: left;
+                color: $text-color;
+                margin-top: em(55px);
+    
+                .col{
+                margin: 0;
+                }
+                
+                .project{
+                padding: em(30px) 5%;
+                height: em(312px);
+                border-width: 0 em(1px) em(1px) 0;
+                border-style: solid;
+                border-color: #cccccc;
+    
+                &:nth-child(3n+3){
+                    border-right-width: 0;
+                }
+    
+                &:nth-last-child(-n+3){
+                    border-bottom-width:0 ;
+                    margin-bottom: em(55px);
+                }
+    
+                a{
+                    color: black;
+                    text-decoration: none;
+                    font-size: em(20px);
+                    font-weight: 780;
+                }
+    
+    
+                p{
+                    padding-top: em(15px);
+                    font-size: em(17.4px);
+                    line-height: em(21px);
+                }
+            }
+        }
+    }
+
+    .pre-footer{
+        @include pre-footer;
+    }
+
+     
+}

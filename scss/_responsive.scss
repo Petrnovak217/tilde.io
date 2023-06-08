@@ -1,0 +1,458 @@
+//********tablet*******
+@include tablet-large{
+
+    header{
+        .navigatio-main-content{
+            h1{
+                font-size: em(75px);
+                padding: em(35px,75px) em(25px,75px);
+            }          
+        }        
+    }
+
+    #about-us {
+        .span-1-of-3{
+            width: 50%;               
+        }
+        .open-source{
+            padding: 0; 
+            
+            .projects{
+                .project{
+                    &:nth-child(n){
+                        border-right-width: em(1px);
+                        border-bottom-width: em(1px);
+                        margin-bottom: 0;
+                    }
+                    &:nth-last-child(1){
+                        border-bottom-width:0;
+                        margin-bottom: em(55px);
+                    }
+                }
+                
+            }
+        }
+    }
+
+    #consulting{
+        .our-proces{
+            .text{
+                h3{
+                    font-size: em(27px);
+                }
+            }         
+        }
+    }
+    
+
+ .content{
+     .skylight-laptop{
+        padding: 0 25px;
+    }
+ }
+}
+
+@include tablet-medium{
+    
+    .sub-head-text .line{   
+        display: inline;             
+    } 
+    
+    #index{
+        .navigatio-main-content{
+            @include navigation-main-content(em(35px),em(17px),em(20px));
+        }
+    }
+   
+    #about-us,
+    #consulting,
+    #contact
+    {
+        .navigatio-main-content{
+            @include navigation-main-content(em(35px),em(17px),em(8px));
+        }
+    }
+    
+
+    #about-us{  
+        .meet-the-team{
+            .founders{
+                .person{
+                    padding: 1em 3em ;
+                }
+                #yehuda-katz{
+                    padding-right: em(320px);
+                }
+
+                #leah-silber{
+                    padding-left: em(330px);
+                }
+            }
+        }          
+    }
+
+    #consulting{
+        .our-proces{
+            
+            .plan,
+            .design,
+            .built{
+                img{
+                    float: none;
+                    padding: em(55px) 0 0;
+                }
+
+                .text{
+                    padding: em(25px) em(55px) em(50px);
+                }
+            }     
+        }
+    }
+}
+
+@include tablet-small{
+   
+    #index,
+    #about-us,
+    #consulting,
+    #skylight,
+    #contact{
+        .pre-footer-inquire{
+
+            h1,span {
+                font-size: em(32px);   
+                margin: 0 0 em(10px);
+                
+            }
+
+            p{
+                font-size: em(20px);
+            }
+            
+
+            .blue-button-animate{  
+                font-size: em(14px);   
+                margin: 0 em(150px);
+                .arrow{
+                    right: em(-21.5px,50px);
+                    
+                }      
+            }
+        }  
+    }
+    
+       
+    header{
+        .nav{
+            text-align: left;
+            height:auto;
+  
+            .menu-nav{
+                display: none;
+     
+                &-item{  
+                  
+                    font-size: em(16.5px);
+                    display: block;
+                    list-style-type: none;
+                    padding:0 0;
+                    margin: 0 em(25px);
+                    border-bottom: em(1px) solid rgba(128, 128, 128, 0.246);
+
+                    &:nth-last-child(1){
+                        border-bottom: none;
+                    }
+                }  
+
+                &.open{
+                    display:block;
+                    text-align: center;        
+                    background-color:lighten($color: #121b21, $amount: 9%) ;
+                }
+            }   
+
+            .logo{
+               display: block;    
+               height: em(70px);  
+               padding: em(18px) 0 0 em(25px);
+            }
+            
+        }
+        .mobile-menu{
+            display: block;
+            width: em(120px);
+            height: em(70px);   
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: lighten($color: #121b21, $amount: 9%) ;
+            text-align: center;
+            cursor: pointer;
+    
+            .mobile-menu__btn{    
+                font-size: em(17px);  
+                font-weight: bold;
+                color: #fff;
+                line-height: em(85px,22px);
+                text-align: center;
+            }
+        }
+
+        .navigatio-main-content{
+            h1{
+                font-size: em(49px);
+            }     
+            
+            span{
+                font-size: em(20px);
+            }
+
+            .team-foto{
+                width: 70%;
+                height: auto;
+                margin-top:-15px;
+            }
+        }        
+    }
+
+    #about-us{
+        
+        .meet-the-team{
+            .founders{
+                
+                .social-icons{
+                    @include social-links(em(20px),em(12px),em(2px));
+                }
+
+                .person{
+                    width: 100%;
+                    padding:  0;
+
+                    &-mini-picture{
+                        display: block;
+                    }
+                }
+        
+                #yehuda-katz{
+                    text-align: center;
+                    background: none;
+                    padding: 0 10px;
+
+                    .text{
+                        padding:em(10px) 0 ;
+                    }
+                }
+
+                #leah-silber{
+                    text-align: center;
+                    background: none;
+                    padding: 0 10px;
+
+                    .text{
+                        padding: em(10px) 0;
+                    }
+                }
+            }
+
+            .team{
+                .social-icons{
+                    @include social-links(em(20px),em(12px),em(2px));
+                }
+            }
+
+            .alumni{
+                ul{
+                    width: 100%;
+                    margin: em(10px) 0 ;
+                }
+            }
+        }  
+        
+        .open-source{
+            &-picture{
+                width: 178px;
+                height: auto;
+            }
+            &-title{
+                font-size: em(25px);
+            }
+
+            &-text{
+                font-size: em(15px);
+            }
+        }          
+    }
+
+    #contact{
+
+        .tilde-info{
+            border-left: 0;   
+            padding-left:0 ; 
+            margin-bottom: em(38px);  
+        }
+        #contact-form{
+            width: 100%;
+            max-width: em(500px);
+            float: none;
+            margin: 0 auto;
+            border-top: 1px solid $text-color;
+            padding: em(50px) em(8px) em(50px);
+        }
+    }
+}
+
+//*****mobile*****
+@include mobile-large{
+    header{
+        .navigatio-main-content{
+            h1{
+                font-size: em(45px);
+            }     
+            
+            span{
+                font-size: em(18px);
+            }
+        }        
+    }
+
+    #about-us {
+        .span-1-of-3{
+            width: 100%;               
+        }
+
+        .open-source{
+            padding: 0; 
+            
+            .projects{
+                .project{
+                    text-align: center;
+                    height: em(220px);
+
+                    &:nth-child(n){
+                        border-right-width: 0;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    footer{
+        .footer-nav{
+
+            .logo-mobile{
+                display: block;
+                border-bottom: em(1px) solid black;
+                padding: 0 0 em(15px);
+                margin: 0 4%;
+            }
+
+            .footer-menu-nav{       
+                width: 100%;
+
+
+                &-item{
+                    display: block;
+                    font-size: em(19px);
+                    padding: em(1px) 0;
+                    border-bottom: em(1px) solid black;
+                    margin: 0 4%;
+                   
+
+                    &:nth-child(3){
+                        display: none;
+                    }
+                }
+            }                    
+        }
+    }  
+}
+
+@include mobile-medium{
+    #index,
+    #about-us,
+    #consulting,
+    #skylight,
+    #contact{
+        .pre-footer-inquire{
+
+            h1,span {
+                font-size: em(23px);   
+            }
+
+            p{
+                font-size: em(16px);
+            }
+
+            .blue-button-animate{   
+                margin: 0;  
+                .arrow{
+                    right: em(-30.5px,50px);
+                    
+                }      
+            }
+        }  
+    }
+
+    #skylight header .navigatio-main-content .skylight-logo{
+        width: em(200px);
+    }
+}
+
+@include mobile-small{
+    .sub-head-text{
+        font-size: em(18px);
+    }
+
+    #about-us .meet-the-team {
+        .founders{
+            #yehuda-katz,
+            #leah-silber{
+                .text{
+                    h3{
+                        font-size: em(28px);
+                    }
+
+                    p{
+                        font-size: em(16px);
+                    }
+                }
+            }
+        }
+
+        .team .babies-at-work{
+            padding: 0 em(25px) em(50px) ;
+            p{
+                font-size: em(16px);
+            }
+
+            .call-to-action{
+                font-size: em(15px);
+            }
+            
+        }
+    }
+
+    #consulting .our-proces .plan .text, #consulting .our-proces .design .text, #consulting .our-proces .built .text{
+        padding-left:1em ;
+        padding-right:1em ;
+
+        h3{
+            font-size: em(23px);
+        }
+    }
+
+  
+   
+}
+
+@include mobile-extra-small{
+    body{
+        width: em(320px);
+        overflow: visible;
+    }
+
+    .border{
+        @include border-main(em(-29px),url('/images/arrow/blue-grey-triangle-border-2ad58b40.png'));
+    }
+}

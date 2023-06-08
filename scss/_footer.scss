@@ -1,0 +1,60 @@
+footer{
+    @include lattie(top,0);  
+    padding: em(48px) 0 em(2px) 0;
+
+    .footer-nav{
+        text-align: center;
+        vertical-align: middle;    
+
+        .logo-mobile{
+            display: none;
+        }
+    
+         a{
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+         }
+    
+        .footer-menu-nav{
+            display: inline-block;
+            line-height: em(50px);
+            margin: 0;
+    
+            &-item{  
+                display: inline-block;
+                list-style-type: none;
+                padding: em(11px) em(10px);
+
+                .logo{
+                   margin: 0 15px;
+                   vertical-align: top;
+                }
+            }  
+            
+            &-link{
+                color:#535b60da;
+                font-size: em(13px);
+                font-weight: 750;
+                text-transform: none;
+    
+                &:hover{
+                    color:#535b60;
+                }
+            }
+        }   
+    } 
+
+    .copyright{
+        margin: em(20px) 0 em(30px);
+        color: #535b60da;
+        font-size: em(10px);
+
+        a{
+            color:#535b60da ;
+            text-decoration: none;
+        }
+    }
+}
+
+   

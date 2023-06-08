@@ -1,0 +1,111 @@
+
+#index .navigatio-main-content{
+    padding-top: 70px;
+    position: relative;
+    background:$main-color url('../images/code-background-eef602f0.png') repeat-y center center/auto 100% ;
+}
+
+
+header{    
+    background-color: #121b21;
+    position: relative;
+
+    .mobile-menu{
+        display: none;
+    }
+
+    .nav{
+        text-align: center;
+        font-family: sans-serif;     
+
+        a{
+            text-decoration: none;
+            vertical-align: middle;
+            font-weight: 800;
+            text-transform: uppercase;      
+        }
+ 
+        .logo{
+            display: inline-block;
+        }
+
+        .menu-nav{
+            display: inline-block;
+            line-height: em(50px);
+ 
+            &-item{  
+                display: inline-block;
+                list-style-type: none;
+                padding: em(11px) em(20px);
+            }  
+            
+            &-link{
+                color: rgba(255, 255, 255, 0.753);
+                font-size: em(12.5px);
+                transition: all 0.5s;
+
+                &:hover{
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }   
+    }    
+    
+    .navigatio-main-content{
+        color: #fff;
+        font-weight: bold;
+        background-color: $main-color;   
+        font-family: sans-serif;
+       
+
+        span{
+            font-size: em(25px);
+            display: block;
+            color: rgba(0, 0, 0, 0.746);
+            letter-spacing: em(-1px);
+            font-weight: 900;
+        }
+
+        h1{
+            line-height:em(13px);
+            padding-top:em(50px,70px) ;
+            font-size: em(110px);
+            text-transform: uppercase;
+            letter-spacing: em(-1px);
+            font-weight: 900;
+
+        }
+
+        .team-foto{
+            position: relative;
+            display: block;
+            width: em(425px);
+            height: em(294px);
+            margin: em(-56px) auto em(-14px);
+        }
+  
+    }
+
+    .yellow-button-animate{
+        position: relative;
+        width: em(210px);
+        height: em(50px);
+        margin: em(-27px) auto 0;
+        line-height: em(58px);
+        z-index: 25;
+        padding: 0 5px;
+
+        .arrow{ 
+            display: block;
+            background:url('../images/arrow/yellow-arrow-cd660a41.png') no-repeat;
+            text-indent: em(25px);
+            color: black;
+            text-decoration: none; 
+            font-weight: 500;
+            font-size: em(19.5px);
+        }
+    }
+}
+
+ 
+
