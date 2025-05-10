@@ -1,0 +1,49 @@
+@import 'context';
+@import 'sites/header-page';
+@import 'sites/home';
+@import 'sites/about-us';
+@import 'sites/consulting';
+@import 'sites/skylight';
+@import 'sites/contact';
+@import 'footer';
+@import 'responsive';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+
+.content{
+    max-width: em(950px);
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+body{  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-weight:normal;
+}
+
+/*stop floating*/
+.clearfix{zoom : 1}
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}

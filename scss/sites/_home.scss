@@ -1,0 +1,67 @@
+
+    .border{
+        @include border-main(em(-30px),url('./images/arrow/blue-grey-triangle-border-2ad58b40.png'));
+      }
+  
+      .sub-head{
+          font-size: 16px;
+  
+          .container{
+             @include lattie;
+          }
+          
+          &-text{
+              color: $sub-head-color;
+              font-size: em(22px);
+              line-height: em(23px);
+              padding: em(40px) em(5px) em(35px) ;
+  
+              .line{
+                  display: block;
+              }
+          }
+
+  
+          &-technologies{
+             
+              &-tittle{
+                  font-size: em(14px);
+                  color: $sub-head-color;
+              }
+  
+              .technologies{
+                  padding-bottom: em(20px);
+  
+                  &-item{
+                      list-style-type:none ;
+                      display: inline-block;
+  
+                      img{
+                          padding: em(15px) em(8px);
+                          cursor: pointer;
+                      }
+                  }
+              }
+          }
+      }
+  
+      .home-what-we-do{
+          margin-top:em(35px);
+          margin-bottom: em(40px);
+  
+          @include section-headings(0);
+  
+          .span-1-of-3 {
+              width: 31.26%; 
+          }
+  
+          .cunsilting,
+          .engagements,
+          .open-source{@include three-colom}
+      } 
+  
+      .pre-footer{
+          @include pre-footer;
+      }
+  
+

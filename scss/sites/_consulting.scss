@@ -1,0 +1,93 @@
+#consulting{
+    .navigatio-main-content{
+        @include navigation-main-content;
+    }
+
+   
+    .border{
+        @include border-main(-6px);
+       }
+
+    .our-proces{
+        @include section-headings;
+
+        .text{
+            text-align: left;
+            line-height: 35px;
+
+            h3{
+                font-size: em(30px);
+                padding-bottom: em(10px);
+                font-weight: 900;
+            }
+
+            p{
+                font-size: em(17.5px);
+                color: $text-color;
+                line-height: em(26px,17.5px);
+                
+
+                &:nth-child(2){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        hr{
+            margin: 25px 0;          
+        }
+
+        .plan{
+            img{
+                float: right;
+                padding: em(55px) em(45px) 0 em(100px);      
+            }
+
+            .text{
+                padding: em(65px) em(90px) em(60px);    
+            }
+       
+        }   
+
+        .design{
+            img{
+                float: left;
+                padding: em(65px) em(100px) 0 em(45px);      
+            }
+
+            .text{
+                padding: em(80px) em(55px) em(65px);
+              
+            }
+        }
+
+        .built{   
+            margin-bottom: 90px;
+            img{
+                float: right;
+                padding: em(35px) em(45px) 0 em(100px);      
+            }    
+            .text{
+                padding:em(80px) em(85px)  em(10px);
+            }
+        }
+    }
+
+    .pre-footer{
+        @include pre-footer(11px 20px);
+
+        p{
+            color: $text-color;
+            font-weight: normal;
+            text-transform: none;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 10px 0;
+        }
+    }    
+    
+
+    footer{
+        padding: 75px 0 0 0;
+    }
+}

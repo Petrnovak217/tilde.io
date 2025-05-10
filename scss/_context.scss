@@ -1,0 +1,241 @@
+//color
+$main-color:#00afc4;
+$sub-head-color:rgba(37, 37, 37, 0.876);
+$text-color:#535b60;
+
+
+
+
+//mixins 
+
+@mixin border-main ($top:em(-30px),$url:url('/images/about-us/blue-white-triangle-border-7b19c553.png')) {   
+    position: relative;
+    display: block;
+    top: $top;
+    width: 100%;
+    height: em(7px);
+    background:transparent  $url top repeat;
+    background-size: em(14px) em(8px);
+    z-index: 1;
+}
+
+
+@mixin section-headings ($top:em(60px)){
+    padding-top:$top;
+    &-subtitle{
+        position: relative;
+        background: url('/images/grey-line-1e0e9dea.gif') center  repeat-x;
+        margin-bottom: em(25px);
+      
+        & > span{
+           display: inline-block;
+            color: #fff;  
+            background-color: black;
+            font-size:em(14px);
+            padding: em(5px) em(8px);
+            line-height: em(25px);  
+        }
+    }
+}
+
+@mixin line{
+    position: relative;
+    background: url('/images/grey-line-1e0e9dea.gif') center  repeat-x;
+    margin-bottom: em(25px);
+}
+
+@mixin lattie ($position : bottom,$top:-30px) {
+    background: #edf3f3 url('/images/lattice-5e08b610.gif') $position repeat-x;
+    position: relative;
+    top: $top;   
+}
+
+@mixin three-colom($margin:em(12px) em(15px) em(12px) em(15px),) {
+    margin-top: em(20px);
+    margin-bottom:em(150px);
+
+    &>h3,img,p,a{
+        margin:$margin ;
+    }
+    h3{
+        font-size: em(20px);
+        line-height: 22px;
+        font-weight: 900;       
+    }
+
+    p{
+        color: rgba(0, 0, 0, 0.568);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: em(19px);
+        line-height: 22px;
+        margin: 0 15px 15px 15px;
+    }
+
+    a{
+        font-size: 17.5px;
+        color: rgba(19, 129, 172, 0.794);
+        word-spacing: -0.9px;
+
+        &:hover{
+            color: rgba(19, 129, 172, 0.89);
+        }
+    }
+
+    @media(max-width:em(720px)){
+        width: 47.9%;
+        margin-bottom: em(25px);
+        &:nth-last-child(1){
+            width: 100%;
+        } 
+    }
+
+    @media(max-width:em(550px)){
+        width: 100%;     
+    }
+}
+
+@mixin social-links ($font-size:12px,$margin-left:15px,$padding:1px) {                 
+    &-link  {
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+        &:nth-child(2){
+            margin-left: $margin-left;
+        }
+                
+        i{
+            font-size: $font-size;
+            color: #fff;  
+            padding:$padding;
+            background-color: $main-color;    
+            border: 1px solid $main-color;
+            border-radius: 50%;
+        }
+    }  
+}
+
+@mixin pre-footer ($padding:em(9.5px) em(17px),$right:em(-15px),$url:(url(/images/arrow/blue-button-base-57b4da19.png))) {  
+    margin-bottom: 70px;
+    font-size: 14.5px;
+
+    &-inquire{
+        font-weight: 900;
+        text-transform: uppercase;
+            
+        hr{
+            margin-bottom:em(70px); 
+        }
+
+        span{
+            display: inline-block;
+            font-size: em(43px);
+            color: black;
+            margin-right: em(30px,50px);
+            vertical-align: middle;
+        }
+
+        a{
+            display: inline-block; 
+            padding: $padding;
+            vertical-align: middle;
+            letter-spacing: em(-0.2px);
+        }
+
+        .blue-button-animate {  
+            background: transparent $url right top no-repeat; 
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            font-size: em(14px);
+           
+
+            .arrow{
+                width: 100%;
+                height: 100%;
+                background: transparent url(/images/arrow/blue-button-arrow-8268bdf4.png) right top no-repeat;
+                position: absolute;
+                top: 0;
+                right:$right;
+                display: inline-block;
+            }
+        }   
+    }      
+}
+
+
+@mixin navigation-main-content($font-size:em(58px),$font-text-size: em(22.5px),$padding:em(2px)) {
+    .content{
+        font-size: 16px;
+        font-weight: 100;
+        h1{
+            font-size:$font-size;
+            padding: em(20px) 0 $padding 0;
+        }
+
+        p{
+            font-size:$font-text-size;
+            line-height: em(20px);
+            letter-spacing: 0.5px;
+            word-spacing: 1px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 0 em(20px,20px) em(45px,20px);       
+        }
+    }
+}
+
+
+
+//function
+@function em($pixels, $basicValue: 16px){
+    @return calc($pixels / $basicValue) * 1em;
+}
+
+
+//responsive
+
+//tablet
+@mixin tablet-large {
+    @media (max-width:em(925px)) {
+        @content;
+    }
+}
+
+@mixin tablet-medium {
+    @media (max-width:em(835px)) {
+        @content;
+    }
+}
+
+@mixin tablet-small {
+    @media (max-width:em(720px)) {
+        @content;
+    }
+}
+
+//tablet end 
+
+//mobile
+@mixin mobile-large {
+    @media (max-width:em(550px)) {
+        @content;
+    }
+}
+
+@mixin mobile-medium {
+    @media (max-width:em(440px)) {
+        @content;
+    }
+}
+
+@mixin mobile-small {
+    @media (max-width:em(352px)) {
+        @content;
+    }
+}
+
+@mixin mobile-extra-small {
+    @media (max-width:em(315px)) {
+        @content;
+    }
+}
+

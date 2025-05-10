@@ -1,0 +1,111 @@
+#skylight{
+  .content {
+    overflow: visible;
+  }
+  header{
+    
+    .navigatio-main-content{
+      background: #edf3f3;
+      padding: 50px 0 100px ;
+
+      .skylight-logo{
+        width: em(360px);
+        margin: em(15px) 0 em(25px);
+      }
+
+      p{   
+        font-size: 22px;
+        color: $text-color;
+        line-height: 32px;
+        margin: 0 20px;
+      }
+    }
+
+    .blue-skylight-button-animate {  
+      width: em(200px);
+      margin: 20px auto 0;
+      line-height: em(58px);
+     
+      .arrow{ 
+        display: block;
+        background:url('/images/skylight/blue-arrow-92ba4a7f.png') no-repeat;
+        text-indent: em(30px);
+        color: #fff;
+        text-decoration: none; 
+        font-weight: 900;
+        font-size: em(15px);
+        background-size: 100%;
+       
+      }
+     
+    }          
+  }
+
+  .skylight-laptop{
+    width: 100%;
+    height:auto;
+    margin-top: em(-50px) ;
+    margin-bottom: em(80px);
+    overflow: visible;
+    position: relative;  
+    z-index: 5;
+  }
+ 
+  .benefits-columns{
+    @include section-headings(0);
+
+     .span-1-of-3 {
+      width: 33%;
+      height: 100%; 
+    }
+
+    .col{
+      margin: 0;
+    }
+
+    .data-storage,
+    .response,
+    .slowdowns{
+      @include three-colom(0 0 em(10px) 0);
+      margin-bottom: em(80px);
+     
+      img{
+        width: em(150px);
+        margin-bottom: 0;
+      }
+
+      h3{
+        margin:em(10px) em(20px);
+      }    
+    }
+  }
+
+  .pre-footer{
+    @include pre-footer( em(11px) em(20px),em(-14px),url('/images/skylight/blue-button-base-57b4da19.png'));
+  
+   
+    hr{
+      width: 100%;
+      display: block;
+    }
+  
+    img{
+      width: em(40px);
+      margin-bottom: em(15px);
+      margin: 0 auto;
+    }
+  
+    h1{
+      font-size: em(37px);
+      font-weight: 900;
+    }
+  
+    p{
+      color:lighten($color: $text-color, $amount: 10%);
+      font-weight: normal;
+      text-transform: none;
+      font-size: em(23px);
+      margin: em(10px) 0 em(25px);
+    }  
+  } 
+}

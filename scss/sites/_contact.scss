@@ -1,0 +1,129 @@
+#contact{
+    .navigatio-main-content{
+        @include navigation-main-content;
+    }
+
+   
+    .border{
+        @include border-main(-6px);
+    }
+
+
+   
+
+    .tilde-info{
+        margin: 80px 0 105px;
+        max-width: em(330px);
+        padding-left: em(20px);
+        border-left: 1px solid black;  
+        display: inline-block;
+
+        dt{
+            text-transform: uppercase;
+            color: black;
+            font-weight: 700;
+            margin: em(15px) 0 em(5px);
+        }
+
+        dd{
+            padding: em(2px) em(55px);
+
+            a{
+                color:darken($color:$main-color, $amount: 8%);
+                font-size: em(16.5px);
+                line-height: em(22px);
+
+                &:hover {
+                    color:darken($color:$main-color, $amount: 10%)
+                }
+            }
+            
+
+            .adress,
+            .phone{
+                color: #535b60;
+                text-decoration: none;
+            }
+
+            
+             
+        }
+        .social-contact{   
+            @include social-links(18px,0,4px);
+
+            .social{
+                i{  
+                    border: none;
+                }
+            }
+        }
+    }
+    
+    #contact-form{
+        margin: 80px 0 105px;
+        width:48.9%;
+        text-align: left;
+        padding:0 em(4px) 0 em(25px) ;
+        float: left;
+
+        h3{
+            font-size: em(20px);
+        }
+
+        .header-buttons{
+            display: block;
+            margin: em(15px) 0;
+            
+            .choice-button{
+                display: inline-block;
+                width: 30%;
+                font-size: em(15px);
+                text-align: center;    
+                padding: em(10px);
+                color: $main-color;
+                cursor: pointer;
+            }
+
+            & > .active-form{
+                border: em(1px) solid black;
+                color: black;
+            }
+        }
+
+        input, textarea{
+            font-family: sans-serif;
+            width: 100%;
+            padding: em(10px);
+            margin:em(4px) 0 em(12px) 0 ;
+            outline: none;
+            border: em(1px) solid transparent;
+            border-radius: em(5px);
+            background-color: #efefef;
+            transition: all 0.5s;
+
+            &:focus{
+               border: 1px solid rgb(37, 36, 36);
+            }
+            
+           
+        } 
+
+        input[type=submit]{
+            color: #fff;
+            font-size: em(16px);
+            font-weight: 500;
+            padding: em(12px);       
+            background-color:$main-color; ;          
+            border-radius: em(5px);    
+            cursor: pointer;
+
+            &:hover {
+               background-color: darken($color: $main-color, $amount: 4%);         
+            }
+        }
+
+        input[name="radio-input"]{
+            display: none;
+        }
+    }
+}
